@@ -3,9 +3,9 @@
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         if (mutation.addedNodes.length) {
-            const discussionTitle = document.querySelector('h3[emphasis="high"]'); // this is the css/html that can help to identify the discussion title
+            const discussionTitle =  document.querySelector('h3[emphasis="high"]'); // this is the css/html that can help to identify the discussion title
             if (discussionTitle) {
-                document.title = discussionTitle.textContent.trim();
+                document.title = "Discussion | " + discussionTitle.textContent.trim();
                 console.log("Discussion title found and tab title updated.");
                 observer.disconnect();
             }
