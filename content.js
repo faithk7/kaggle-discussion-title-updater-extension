@@ -2,6 +2,12 @@
 
 console.log("Test Extension loaded.");
 
-document.addEventListener('DOMContentLoaded', () => {
+function logDOMLoaded() {
     console.log("DOM fully loaded and parsed.");
-});
+}
+
+if (document.readyState === "complete" || document.readyState === "interactive") {
+    logDOMLoaded();
+} else {
+    document.addEventListener('DOMContentLoaded', logDOMLoaded);
+}
