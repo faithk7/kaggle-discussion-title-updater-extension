@@ -1,17 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "Test Extension",
+    "name": "Kaggle Title Updater Extension",
     "version": "1.0",
-    "description": "A test Chrome extension using Manifest V3 - haha.",
+    "description": "A chrome extension that is used to update the actual content of a kaggle discussion.",
     "permissions": ["scripting"],
-    "host_permissions": ["<all_urls>"],
+    "host_permissions": ["*://*.kaggle.com/*"],
     "background": {
         "service_worker": "background.js"
     },
     "action": {},
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
+            "matches": ["*://*.kaggle.com/*/discussion/*"],
             "js": ["content.js"]
         }
     ]
