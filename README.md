@@ -1,0 +1,1 @@
+By default kaggle just renders the title as a default value (e.g., [Competition] | Kaggle). This is a simple chrome extension that grabs the actual title of the discussion and render as the title of the tab.
