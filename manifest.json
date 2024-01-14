@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Test Extension",
     "version": "1.0",
-    "description": "A test Chrome extension using Manifest V3.",
+    "description": "A test Chrome extension using Manifest V3 - haha.",
     "permissions": ["scripting"],
     "host_permissions": ["<all_urls>"],
     "background": {

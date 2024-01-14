@@ -7,7 +7,9 @@ function logDOMLoaded() {
 }
 
 if (document.readyState === "complete" || document.readyState === "interactive") {
+    console.log("inside the if branch");
     logDOMLoaded();
 } else {
+    console.log("else branch");
     document.addEventListener('DOMContentLoaded', logDOMLoaded);
 }
