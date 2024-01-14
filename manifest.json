@@ -1,12 +1,17 @@
 {
-    "manifest_version": 2,
-    "name": "Kaggle Discussion Title Updater",
+    "manifest_version": 3,
+    "name": "Test Extension",
     "version": "1.0",
-    "description": "Updates the tab title with the title of Kaggle discussions.",
-    "permissions": ["activeTab"],
+    "description": "A test Chrome extension using Manifest V3.",
+    "permissions": ["scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {},
     "content_scripts": [
         {
-            "matches": ["https://www.kaggle.com/*/discussion/*"],
+            "matches": ["<all_urls>"],
             "js": ["content.js"]
         }
     ]

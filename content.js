@@ -1,8 +1,7 @@
 // content.js
 
+console.log("Test Extension loaded.");
+
 document.addEventListener('DOMContentLoaded', () => {
-    const discussionTitle = document.querySelector('h3[emphasis="high"]');
-    if (discussionTitle) {
-        document.title = discussionTitle.textContent.trim();
-    }
+    console.log("DOM fully loaded and parsed.");
 });
