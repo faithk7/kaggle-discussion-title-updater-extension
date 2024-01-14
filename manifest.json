@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "Kaggle Discussion Title Updater",
+    "version": "1.0",
+    "description": "Updates the tab title with the title of Kaggle discussions.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.kaggle.com/*/discussion/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
